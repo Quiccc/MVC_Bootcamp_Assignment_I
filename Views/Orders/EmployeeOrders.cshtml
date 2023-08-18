@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MVC_Bootcamp_Assignment_I.Models.Order>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Employee Orders</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Order Number</th>
+            <th>Order Date</th>
+            <th>Customer</th>
+            <th>Products</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.OrderId)</td>
+                <td>@Html.DisplayFor(modelItem => item.OrderDate)</td>
+                <td>@Html.DisplayFor(modelItem => item.Customer.ContactName)</td>
+                <td><a href=@Html.Raw("/OrderDetails?orderId=" + item.OrderId) class="btn btn-primary">Products</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

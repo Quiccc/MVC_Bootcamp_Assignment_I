@@ -1,0 +1,28 @@
+﻿@model MVC_Bootcamp_Assignment_I.Models.Employee
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Change the Phone Number</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="EmployeeId" />
+            <div class="form-group">
+                <input type="text" name="NewNumber"/>
+            </div>
+            <div class="form-group" style="padding-top:4%">
+                <input type="submit" value="Save" class="btn btn-primary"/>
+                <a asp-controller="LandingPage" asp-action="Index" class="btn btn-primary">Exit</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

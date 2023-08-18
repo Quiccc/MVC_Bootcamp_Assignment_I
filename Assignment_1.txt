@@ -1,0 +1,10 @@
+Ödev - I
+
+Northwind veritabaný üzerinde çalýþacak bir MVC uygulamasý geliþtireceksiniz. Uygulamanýn akýþý ve ekranlarý aþaðýdaki gibi olacak.
+
+Ýlk olarak çalýþanlarýn listelendiði ekran açýlacak. Bu ekranda çalýþanýn adý, soyadý ve ünvaný yer alacak.
+Bu ekranda her çalýþanýn yanýnda Sipariþler ve Profilim linkleri yer alacak
+Sipariþler linkine týklandýðýnda o çalýþanýn ilgilendiði sipariþler listelenecek. Sipariþ no, sipariþ tarihi ve müþteri adý yer alacak. Ayrýca her sipariþin yanýnda Ürünler linki yer alacak.
+Ürünler linkine týklandýðýnda o sipariþte yer alan ürünlerin adý ve miktarýnýn listelendiði ekran açýlacak.
+Profilim linkine týklandýðýnda o çalýþanýn adý, soyadý, pozisyonu, doðum tarihi, telefonu ve adresi bilgilerinin yer aldýðý sayfa açýlacak. Ýstenirse bu sayfa üzerinden iletiþim bilgileri güncellenebilecek.
+

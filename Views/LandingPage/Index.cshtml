@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MVC_Bootcamp_Assignment_I.Models.Employee>
+
+@{
+    ViewData["Title"] = "All Index";
+}
+
+<h1>All Employees</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Employee Name</th>
+            <th>Employee Orders</th>
+            <th>Employee Profile</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.Raw(item.TitleOfCourtesy + " " + item.FirstName + " " + item.LastName)</td>
+                <td><a href=@Html.Raw("Orders/EmployeeOrders?employeeId=" + item.EmployeeId) class="btn btn-primary">Orders</a></td>
+                <td><a href=@Html.Raw("/EmployeeDetails?employeeId=" + item.EmployeeId) class="btn btn-primary">Profile</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
